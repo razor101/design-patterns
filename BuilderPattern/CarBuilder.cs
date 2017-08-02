@@ -2,18 +2,11 @@ namespace design_patterns.BuilderPattern
 {
     public class CarBuilder
     {
-        private readonly Logger logger;
-        
         private string make;
 
         private string model;
 
         private int horsePower;
-
-        public CarBuilder(Logger logger)
-        {
-            this.logger = logger;
-        }
 
         public void SetMake(string make)
         {
