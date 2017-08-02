@@ -2,7 +2,7 @@ using System;
 
 namespace design_patterns.CommandPattern
 {
-    public class CreateUserCommand : ICommandWithResults<string>
+    public class CreateUserCommand : ICommandWithResults<Guid>
     {
         private readonly string userName;
         private readonly string email;
@@ -15,9 +15,9 @@ namespace design_patterns.CommandPattern
             this.userName = userName;
         }
 
-        public string Execute()
+        public Guid Execute()
         {
-            return this.userName;
+            return Guid.NewGuid();
         }
     }
 }

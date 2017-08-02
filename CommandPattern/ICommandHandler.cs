@@ -2,10 +2,8 @@ namespace design_patterns.CommandPattern
 {
     public interface ICommandHandler
     {
-         void Execute<TCommand>(TCommand command)
-            where TCommand : ICommand;
+         void Execute(ICommand command);
 
-         TCommandResults ExecuteWithResults<TCommand, TCommandResults>(TCommand command)
-            where TCommand : ICommandWithResults<TCommandResults>;
+         TResult ExecuteWithResults<TResult>(ICommandWithResults<TResult> command);
     }
 }

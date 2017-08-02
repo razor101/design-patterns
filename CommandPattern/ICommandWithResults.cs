@@ -1,7 +1,7 @@
 namespace design_patterns.CommandPattern
 {
-    public interface ICommandWithResults<T>
+    public interface ICommandWithResults<TResults>
     {
-         T Execute();
+         TResults Execute();
     }
 }
